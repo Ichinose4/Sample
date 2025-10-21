@@ -13,13 +13,6 @@ struct ContentView: View {
             Text("こんにちは！")
             
             Text("私は山田太郎です")
-            Text("🎵趣味：音楽を聴くこと🎵")
-            Text("SwifuUIを使って、いろんなアプリを作ってみたいです！")
-            HStack(spacing:16){
-                Image(systemName:"ladybug")
-                Image(systemName:"ant")
-                Image(systemName:"leaf")
-            }
         }
     }
 }
