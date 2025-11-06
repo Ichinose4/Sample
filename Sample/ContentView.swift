@@ -1,43 +1,17 @@
 import SwiftUICore
 import SwiftUI
 
-struct SampleView: View{
-    @State var inputAnswer: String = ""
+struct ContentView: View{
+    let favoriteFoods = ["ピザ🍕","寿司🍣","ラーメン","ハンバーガー","アイスクリーム"]
     
-    var body: some View {
-        VStack(alignment: .leading, spacing: 20){
-            Text("Q.()に入る言葉を答えなさい。")
-                .font(.headline)
-                .fontWeight(.bold)
-                .foregroundColor(.black)
-            
-            
-            let questionText = Text("祇園精舎の鐘の声、諸行(")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundStyle(.gray)
-            
-            + Text("\(inputAnswer)")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.blue)
-            
-            + Text(")の響きあり。")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.gray)
-            
-            Group {
-                questionText
+    var body: some View{
+        NavigationStack{
+            List(favoriteFoods, id:\.self){ food in
+                Text(food)
+                    .font(.title2)
+                    .padding(.vertical, 8)
             }
-            
-            TextField("回答を入力してください",text:$inputAnswer)
-                .textFieldStyle(.roundedBorder)
+            .navigationTitle("好きな食べ物リスト")
         }
-        .padding(.all, 30)
     }
-}
-
-#Preview {
-    SampleView(inputAnswer: "1")
 }

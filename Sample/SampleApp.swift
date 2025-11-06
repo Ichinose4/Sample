@@ -34,6 +34,7 @@ struct MoodDiaryView: View{
         NavigationStack{
             List(diaryList) { diary in
                 HStack(spacing: 8){
+
                     Text(diary.mood.rawValue)
                     Spacer()
                     Text(diary.content)
@@ -44,6 +45,9 @@ struct MoodDiaryView: View{
         }
     }
 }
+
+
+
 #Preview{
     MoodDiaryView()
 }
