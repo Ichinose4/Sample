@@ -120,9 +120,6 @@ struct MoodDiaryFormView: View {
             
                         
                     
-                    
-#Preview{
-    MoodDiaryFormView(diaryList: .constant([]))
-}
+              
 
     
