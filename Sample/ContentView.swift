@@ -12,6 +12,7 @@ struct ContentView: View{
                     .padding(.vertical, 8)
             }
             .navigationTitle("好きな食べ物リスト")
+            .navigationTitle("あいうえお")
         }
     }
 }
